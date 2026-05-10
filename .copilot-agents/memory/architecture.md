@@ -1,7 +1,6 @@
 # Architecture
 
 ## System Overview
-<!-- High-level description -->
 
 ## Core Components
 
@@ -11,7 +10,5 @@
 - Interfaces with:
 
 ## Data Flow
-<!-- How data moves for common operations -->
 
 ## Deployment
-<!-- Production runtime: containers, cloud, regions -->

@@ -1,31 +1,31 @@
 # Coding Conventions
 
 ## Style
-- Java 21, Spring Boot 3.x
-- Checkstyle + Spotless
+- Java 21, Spring Boot 3.x, React 18, TypeScript
+- Checkstyle + Spotless (backend) · ESLint + Prettier (frontend)
 
 ## Naming
-- Classes: PascalCase
-- Methods/variables: camelCase
+- Java classes: PascalCase
+- Java methods/vars: camelCase
 - Constants: UPPER_SNAKE_CASE
+- React components: PascalCase
+- React hooks: camelCase with use prefix
 - DB tables/columns: snake_case
-- Packages: lowercase.dotted
 
 ## Patterns In Use
-<!-- List active design patterns -->
 
 ## Patterns to AVOID
-<!-- Banned patterns -->
 
 ## Error Handling
-- All exceptions logged at ERROR with full context
-- Custom exception hierarchy under exception/ package
-- Global handler via @RestControllerAdvice
+- Backend: @RestControllerAdvice, structured error response
+- Frontend: React Error Boundaries, TanStack Query error states
 
 ## Testing
-- JUnit 5, Mockito, AssertJ, Testcontainers
-- Coverage target: 80% minimum
+- Backend: JUnit 5, Mockito, AssertJ, Testcontainers
+- Frontend: Jest, React Testing Library, Playwright (e2e)
+- Coverage: 80% minimum
 
 ## Git
 - Branches: feature/, fix/, chore/
-- Commits: conventional commits format
+- Commits: conventional commits
+- Pre-commit: sanitization hook mandatory

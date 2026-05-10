@@ -52,25 +52,14 @@ CLOUD MIGRATION PRE-FLIGHT CHECKLIST
    d. Migration deadline?
 ```
 
-Only after receiving answers, generate the migration plan.
-
 ---
 
 ## Migration Phases
 
 ### Phase 1 — Audit and Mapping
-- Map every AWS service to Azure equivalent
-- Identify gaps (no direct equivalent)
-- Flag risks and blockers
-
-### Phase 2 — IaC Translation
-- CloudFormation/CDK → Bicep or Terraform (Azure)
-- Lambda handler → Azure Function handler
-- IAM policies → Azure RBAC + Managed Identities
-
+### Phase 2 — IaC Translation (CloudFormation/CDK → Bicep or Terraform)
 ### Phase 3 — Code Migration
 
-Lambda to Azure Function conversion:
 ```
 AWS                          Azure
 ---                          -----
@@ -88,18 +77,8 @@ CloudWatch Logs              Azure Monitor / App Insights
 EventBridge                  Azure Event Grid
 ```
 
-### Phase 4 — Testing
-Auto-fires Test Writer sub-agent
-
+### Phase 4 — Testing (auto-fires Test Writer)
 ### Phase 5 — Cutover Plan
-- DNS/traffic switch strategy
-- Rollback trigger conditions
-- Azure App Insights monitoring setup
-
----
 
 ## Sub-Agents Auto-Fired
-- Dependency Analyzer: scan pom.xml/package.json for AWS SDKs to replace
-- Security Auditor: check IAM scope and secret handling
-- Test Writer: integration tests for migrated functions
-- Code Reviewer: review all generated Azure Function code
+Dependency Analyzer, Security Auditor, Test Writer, Code Reviewer, Sanitization Agent

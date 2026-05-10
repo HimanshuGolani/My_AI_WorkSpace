@@ -16,9 +16,9 @@
 
 ## Repository Structure
 ```
-src/main/java     application code
+src/main/java       application code
 src/main/resources  config, migrations
-src/test          test code
+src/test            test code
 ```
 
 ## Team Context

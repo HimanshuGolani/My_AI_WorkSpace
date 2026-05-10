@@ -1,14 +1,12 @@
 # Architecture Decision Record (ADR)
 
-<!-- One entry per decision. Newest on top. -->
-
 ---
 
-## [SETUP] Memory System Initialized
+## [SETUP] Memory System v2 Initialized
 **Status:** Accepted
-**Context:** Copilot loses context on every IDE restart
-**Decision:** Persistent markdown-based memory system in .copilot-agents/
-**Consequences:** All agents read memory on boot; all tasks write back to memory
-**Alternatives Considered:** External DB (too complex), Copilot built-in memory (unreliable)
+**Context:** Copilot loses context on IDE restart; needed frontend agents and secret scanning
+**Decision:** Extended system with React Web, React Native, Sanitization agents, Skills library, and git hooks
+**Consequences:** Full-stack coverage; secret scanning at every output and commit
+**Alternatives Considered:** Third-party secret scanning only (too late in cycle)
 
 ---

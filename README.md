@@ -1,6 +1,6 @@
 # Copilot Persistent Memory System
 
-> A production-grade, file-based memory and multi-agent framework for GitHub Copilot. Survives every IDE restart. Zero external dependencies.
+> A file-based memory and multi-agent framework for GitHub Copilot. Survives every IDE restart. Zero external dependencies.
 
 ---
 
